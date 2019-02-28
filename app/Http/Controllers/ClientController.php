@@ -3,7 +3,6 @@
 	namespace App\Http\Controllers;
 
     use Illuminate\Support\Facades\Auth;
-    use Illuminate\Database\Eloquent\Model;
     use Illuminate\Support\Str;
 	
 	

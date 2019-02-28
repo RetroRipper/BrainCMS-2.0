@@ -11,16 +11,13 @@
 |
 */
 
-
-
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/', 'IndexController@show')->name('index');
 
 Auth::routes();
 
-
 Route::middleware(['auth'])->group(function () {
-Route::get('/me', 'MeController@me')->name('me');
-Route::get('/client', 'GameController@client')->name('client');
+Route::get('/me', 'MeController@show')->name('me');
+Route::get('/client', 'ClientController@show')->name('client');
 Route::get('/logout', 'Auth\LoginController@logout');
 });
 

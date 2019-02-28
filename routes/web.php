@@ -19,7 +19,7 @@ Auth::routes();
 
 
 Route::middleware(['auth'])->group(function () {
-Route::get('/me', 'PagesController@me')->name('me');
+Route::get('/me', 'MeController@me')->name('me');
 Route::get('/client', 'GameController@client')->name('client');
 Route::get('/logout', 'Auth\LoginController@logout');
 });

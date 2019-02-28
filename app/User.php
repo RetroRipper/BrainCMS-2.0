@@ -12,9 +12,9 @@
         public $timestamps = false;
         
         protected $fillable = [
-        'email', 'password', 'username', 'ip_register', 'ip_current', 'motto', 'last_login', 'account_created',
+        'email', 'password', 'username', 'ip_register', 'ip_current', 'motto', 'last_login', 'account_created', 'auth_ticket',
         ];
-        
+
         protected $hidden = [
         'password', 'remember_token',
         ]; 

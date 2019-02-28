@@ -6,7 +6,7 @@
 	
 	class IndexController extends Controller
 	{
-		public function index() {
+		public function show() {
 			if(Auth::check()) {
 				return redirect('/me');
 				} else {

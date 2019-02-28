@@ -4,8 +4,8 @@
 
 	use App\Currency;
 	
-	class MeController extends Controller
-	{
+	class MeController extends Controller {
+
 		public function show() {
 			return view('pages.me.show',[
 				'users_currency_duckets' => Currency::users_currency('0')->amount,

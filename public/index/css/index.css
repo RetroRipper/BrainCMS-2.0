@@ -1,0 +1,160 @@
+html, body{
+  background: #425c6e;
+  margin: 0 auto;
+  font-family:Khula;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+    opacity: 0.6;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff;
+}
+.invalid-feedback{
+	background-color: #bb3939;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,.16), 0 2px 2px 0 rgba(0,0,0,.12);
+    color: white;
+}
+.frame{
+  width: 860px;
+  margin: 0 auto;
+}
+
+.frame .f_box{
+  width: 100%;
+  height: 350px;
+  float:left;
+  background: #fff;
+  margin-top:200px;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,.16), 0 2px 2px 0 rgba(0,0,0,.12);
+}
+.frame .f_box .f_right{
+  width: 50%;
+  height: 350px;
+  background: url(../images/index.png) -168px -62px;
+  float:right;
+  border-left: 2px solid #dcdcdc;
+}
+.frame .f_box .f_logo {
+    height: 74px;
+    width: 198px;
+    background: url(../images/logo_f.png);
+    float: left;
+    filter: drop-shadow(0 0 5px #40666f);
+    margin-top: 150px;
+    margin-left: 115px;
+}
+.frame .f_box .f_left{
+    width: 49.7%;
+    height: 350px;
+    float:left;
+}
+.frame .f_box .f_left .f_h1 {
+    float: left;
+    color: #3b5569;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 63px;
+    margin-top: 40px;
+}
+.frame .f_box .f_left .register_f{
+    margin-top:35px;
+}
+.frame .f_box .f_left .input{
+    margin-top: 1px;
+    border:0;
+    float:left;
+    width: 310px;
+    padding-left:50px;
+    height:47px;
+    color: rgb(67, 89, 103);
+    background: #f1f4f5;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius:1px;
+    border: 1px solid #fff;
+    margin-left: 62px;
+}
+.frame .f_box .f_left .input:focus{
+  border: 0;
+}
+.frame .f_box .f_left i{
+  float:left;
+  position:relative;
+  z-index: 99;
+  left:-290px;
+  top:17px;
+  color: #949494;
+}
+.frame .f_box .f_left .submit{
+  height: 43px;
+  width: 310px;
+  background: #476073;
+  float:left;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Khula;
+  border: 2px solid #fff;
+  margin-left: 62px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.frame .f_box .f_left .remember{
+	width: 310px;
+    float: left;
+    color: #3b5569;
+    margin-left: 62px;
+    cursor: pointer;
+}
+.frame .f_box .f_left .forgot{
+	width: 310px;
+    float: left;
+    color: #3b5569;
+    margin-left: 62px;
+    cursor: pointer;
+}
+.frame .f_box .f_left .register{
+  height: 40px;
+  width: 307px;
+  background: #6f3f3f;
+  float:left;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Khula;
+  border: 2px solid #fff;
+  margin-left: 62px;
+  line-height: 45px;
+  text-decoration: none;
+}
+.frame .f_footer{
+  width: 100%;
+  height: auto;
+  float: left;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.74);
+  text-align: -webkit-center;
+  margin-top: 15px;
+}
+.frame .f_footer strong{
+  font-weight: 400;
+  color: #fff;
+}

@@ -27,7 +27,7 @@
 				"client.allow.cross.domain":"1",
 				"flash.client.origin":"popup",
 				"processlog.enabled":"0",
-				"sso.ticket":"{{ $SSO }}",
+				"sso.ticket":"{{ $sso }}",
 				"productdata.load.url":"{{ config('hotel.clientvars.productdata_load_url') }}",
 				"furnidata.load.url":"{{ config('hotel.clientvars.furnidata_load_url') }}",
 				"external.texts.txt":"{{ config('hotel.clientvars.external_texts_txt') }}",

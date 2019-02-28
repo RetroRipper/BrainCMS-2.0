@@ -2,19 +2,17 @@
 	
 	namespace App\Http\Controllers;
 	
-	use Illuminate\Database\Eloquent\Model;
 	use Illuminate\Support\Facades\Auth;
-	use Illuminate\Support\Facades\DB;
 	
 	
-	class GameController extends Model
+	class GameController extends Controller
 	{
 		public function client()
 		{
 			
-			$SSO = $this->generateSSO();
-			DB::table('users')->where('id', Auth::user()->id)->update(['auth_ticket' => $SSO]);
-			return view('pages.client', ['SSO' => $SSO]);
+			$sso = $this->generateSSO();
+            Auth::user()->update([ "auth_ticket" => $sso ]);
+			return view('pages.client', [ "sso" => $sso ]);
 
 		}
 		

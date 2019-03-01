@@ -7,8 +7,15 @@
         <div class="col-md-12">
             <div class="menu-user">
             	Credits:{{ Auth::user()->credits }} <br>
-            	Duckets:{{ $users_currency_duckets }}<br>
-            	Diamonds:{{ $users_currency_diamonds }}
+                Duckets:
+                @foreach ($currency->where("type", "5") as $object)
+                    {{ $object->amount }}
+                @endforeach
+                <br>
+                Diamonds:
+                @foreach ($currency->where("type", "0") as $object)
+                    {{ $object->amount }}
+                @endforeach
             </div>
         </div>
 </div>

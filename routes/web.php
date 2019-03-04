@@ -1,10 +1,9 @@
 <?php
+Auth::routes();
 
 Route::group([ "middleware" => "guest" ], function () {
     Route::get('/', 'Redirect@render')->name('index');
-    Auth::routes();
 });
-
 
 Route::group([ "middleware" => "user" ], function () {
 

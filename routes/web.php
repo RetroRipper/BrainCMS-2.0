@@ -1,7 +1,7 @@
 <?php
 
 Route::group([ "middleware" => "guest" ], function () {
-    Route::get('/', 'IndexController@show')->name('index');
+    Route::get('/', 'Redirect@render')->name('index');
     Auth::routes();
 });
 

@@ -10,7 +10,7 @@
                 Email: {{ Auth::user()->email }}<br>
                 Credits: {{ Auth::user()->credits }}<br>
                 Duckets: {{ $currency->where("type", 0)->first()->amount }}<br>
-                Diamonds: {{ $currency->where("type", 0)->first()->amount }}
+                Diamonds: {{ $currency->where("type", 5)->first()->amount }}
             </div>
         </div>
     </div>

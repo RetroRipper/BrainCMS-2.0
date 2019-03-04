@@ -7,8 +7,6 @@
 	class MeController extends Controller {
 
         public function show() {
-            return view('pages.me.show', [
-                'currency' => Auth::user()->currency()->get()
-            ]);
+            return view('pages.me.show');
         }
 	}

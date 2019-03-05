@@ -9,11 +9,43 @@ class User extends Authenticable
 {
     use Notifiable;
 
-    protected $table = 'users';
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
     public $timestamps = false;
 
-    protected $fillable = ['email', 'password', 'username', 'ip_register', 'ip_current', 'motto', 'last_login', 'account_created', 'auth_ticket'];
-    protected $hidden = ['password', 'remember_token'];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['username',
+        'password',
+        'mail',
+        'auth_ticket',
+        'rank',
+        'rank_vip',
+        'credits',
+        'vip_points',
+        'activity_points',
+        'look',
+        'gender',
+        'motto',
+        'ip_last',
+        'ip_reg'
+    ];
+
+    /**
+     * The attributes that are hidden while returning the object as an array or JSON
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'auth_ticket'
+    ];
 
     public function currency()
     {

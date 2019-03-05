@@ -1,4 +1,4 @@
-## BrainCMS
+## BrainCMS v2.0
 A Habbo CMS using Laravel 5.7.
 
 ### Before You Start
@@ -29,7 +29,11 @@ This step involves changing the DB_ values for the most part to coincide with yo
 ```bash
 php artisan key:generate
 ```
-- Migrate DB changes 
+- Import the database
+```
+Import brain.sql in your database
+```
+- Migrate DB changes
 ```
 php artisan migrate
 ```

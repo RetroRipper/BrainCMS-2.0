@@ -9,17 +9,23 @@ class AddEmailToUsers extends Migration
 
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('email');
-        });
-        DB::statement('ALTER TABLE users MODIFY COLUMN `mail` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL AFTER `password`;');
+        if(!Schema::hasColumn('users', 'mail'))
+        {
+            Schema::table('users', function (Blueprint $table) {
+                $table->string('mail')->after('password');
+            });
+        } else if(Schema::hasColumn('users', 'email')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->dropColumn('email');
+                $table->string('mail')->after('password');
+            });
+        }
     }
 
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('email');
+            $table->dropColumn('mail');
         });
-        DB::statement('ALTER TABLE users MODIFY COLUMN `mail` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT NULL AFTER `password`;');
     }
 }

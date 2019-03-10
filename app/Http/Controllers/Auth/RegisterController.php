@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Carbon\Carbon;
+use App\Models\Player\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

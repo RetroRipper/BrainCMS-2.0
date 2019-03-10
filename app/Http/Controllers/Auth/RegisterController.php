@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    public function getRegister()
+    public function showRegistrationForm()
     {
         return view('pages.guest.register');
     }

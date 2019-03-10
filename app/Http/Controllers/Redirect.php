@@ -7,7 +7,13 @@ class Redirect extends Controller
 
     public function render()
     {
-            return view('index');
+        if (auth()->user())
+        {
+            return redirect('/me');
+        }
+        else {
+            return redirect('/login');
+        }
     }
 
 }

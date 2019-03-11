@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="home-user">
                 <div class="home-user-avatar">
                     <img class="home-user-avatar-image" src="https://www.habbo.nl/habbo-imaging/avatarimage?figure={{ Auth::user()->look }}&head_direction=3&gesture=sml&size=l&headonly=1">
@@ -36,8 +36,9 @@
                     </div>
                 </div>
             </div>
+            @include('components.randomusers')
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             @include('components.news')
         </div>
     </div>

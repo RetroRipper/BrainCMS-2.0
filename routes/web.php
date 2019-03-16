@@ -12,6 +12,11 @@ Route::group([ "middleware" => "user" ], function () {
         Route::get('client', 'Client@render')->name('client');
         Route::get('logout', 'Logout@render')->name('logout');
     });
+
+    Route::group([ "namespace" => "Articles" ], function () {
+        Route::get('news', 'News@render')->name('News');
+    });
+
 });
 
 
